@@ -29,6 +29,11 @@ public class Example {
     }
 
     @Test
+    // to activate second level cache
+    // set hibernate.cache.use_query_cache to true
+    // set a second level cache provider for example hibernate.cache.region.factory_class org.hibernate.cache.ehcache.EhCacheRegionFactory
+    // see persistence.xml
+    // for ehcache add the ehcache.xml configuration file to the classpath
     public void getBrand() {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
 
